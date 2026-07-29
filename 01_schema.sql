@@ -1,6 +1,8 @@
 CREATE DATABASE company_finance;
 USE company_finance;
 
+-- 1. Staging Table for Raw Ingestion
+
 CREATE TABLE target_staging_data(
 Year INT ,
 Company VARCHAR(100),
@@ -27,11 +29,15 @@ Number_of_Employees DECIMAL(18,2),
 Inflation_Rate DECIMAL(18,2)
 );
 
+-- 2. Company Dimension Table
+
 CREATE TABLE company(
 company_id INT AUTO_INCREMENT PRIMARY KEY,
 company_name VARCHAR(150),
 Category VARCHAR(50)
 );
+
+-- 3. Financial Performance Fact Table
 
 CREATE TABLE Financial_Performance (
     Performance_id INT AUTO_INCREMENT PRIMARY KEY,

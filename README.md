@@ -4,7 +4,7 @@
 
 Organizations require structured relational schemas to track multi-year financial performance, evaluate sector trends, and measure solvency risks. 
 
-This project transforms raw, unnormalized financial data into a clean relational star schema in **MySQL**. It separates company metadata from multi-year performance facts, enabling efficient analysis of Year-over-Year (YoY) revenue progression, profitability margins, sector rankings, and capital structure risk.
+This project transforms raw, unnormalized financial data into a clean relational star schema in **MySQL**. It separates company metadata from multi-year performance facts, enabling efficient analysis of Year-over-Year (YoY) revenue progression, profitability margins, sector rankings, and capital structure risk, and The interactive dashboard provides a high-level corporate financial analysis of major public companies across various industry sectors. It evaluates key financial health indicators, profitability metrics, operational efficiency, and capital structure dynamics (leveraging data spanning from approximately 2008 to 2022+).
 
 ---
 
@@ -60,5 +60,21 @@ The data model transitions from a single flat staging table to a normalized dime
 
 # 6. Solvency & Financial Health Profiling
 * Automated categorization of corporate balance sheet health (`High Financial Risk`, `Moderate Risk`, `Solvent`).
+
+
+📈 Power BI Dashboard Analytics
+The Power BI dashboard connects directly to MySQL to deliver interactive, executive-level insights:
+
+# 1. Executive KPI Panel: Displays aggregate Total Revenue ($12.21M), Total EBITDA ($3.25M), EBITDA Margin % (0.27), and overall Solvency Status (Stable).
+
+# 2. Return Metrics Breakdown: Multi-metric bar chart evaluating Average ROE %, Average ROI %, and Average ROA % across evaluated companies (AAPL, MSFT, INTC, NVDA, GOOG,        etc.).
+
+# 3. Market Capitalization Sector Allocation: Donut chart showcasing market cap distribution across sectors, highlighting IT as the dominant category (~68.02%).
+
+# 4. Net Profit Margin Trajectory: Line chart illustrating profit margin progression across entities ranging from high performers (MSFT, GOOG) to distressed entities            (SHLDQ).
+
+# 5. Solvency & Risk Timeline: Multi-year dual-axis chart tracking Average Current Ratio vs. Average Debt-to-Equity Ratio over time.
+
+# 6. Interactive Slicers: Multi-company filter sidebar allowing dynamic visual slicing by company_name.
 
 
